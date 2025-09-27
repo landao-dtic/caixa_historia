@@ -6,22 +6,22 @@
     },
     {
         "image": "assets/images/cena2.png",
-       /* "characters": ["assets/images/leo_triste.png", "assets/images/bia_acenando.png"],*/
+       "characters": [],
         "text": "De repente, a amiga do Léo, a Bia, chegou na praia. Ela viu o Léo meio desanimado e perguntou: \"O que foi, Léo?\". Ele contou sobre seu sonho de construir um castelo gigante."
     },
     {
         "image": "assets/images/cena3.png",
-       /* "characters": ["assets/images/leo_sorrindo.png", "assets/images/bia_aproximando.png"],*/
+       "characters": [],
         "text": "A Bia sorriu e disse: \"Sozinho pode ser difícil, mas juntos nós conseguimos! Eu te ajudo!\". O que vocês acham que o Léo sentiu quando ouviu isso, crianças? (Pausa para interação)"
     },
     {
         "image": "assets/images/cena4.png",
-        /*"characters": ["assets/images/leo_bia_trabalhando.png"],*/
+        "characters": [],
         "text": "Eles começaram a trabalhar juntos! O Léo pegava a areia molhada e a Bia ajudava a montar as torres. Trabalhando em equipe, tudo ficou mais rápido e divertido!"
     },
     {
         "image": "assets/images/castelo_final.png",
-        "characters": ["assets/images/sol_sorrindo.png"],
+        "characters": [],
         "text": "E no final... olhem só! Eles construíram o castelo de areia mais incrível da praia! Juntos, eles conseguiram realizar o sonho do Léo. Eles aprenderam que a amizade e a cooperação são como mágica!"
     }
 ]
