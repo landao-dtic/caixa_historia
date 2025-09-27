@@ -1,0 +1,23 @@
+[
+    {
+        "image": "assets/images/certo_brinquedos.png",
+        "correct": true,
+        "feedback": "⭐ Correto! Guardar brinquedos juntos é cooperação!"
+    },
+    {
+        "image": "assets/images/errado_quebra_cabeca.png",
+        "correct": false,
+        "feedback": "❌ Não é legal pegar as coisas dos amigos à força!"
+    },
+    {
+        "image": "assets/images/certo_plantinha.png",
+        "correct": true,
+        "feedback": "⭐ Muito bem! Cuidar das plantas juntos é lindo!"
+    },
+    {
+        "image": "assets/images/errado_pintura.png",
+        "correct": false,
+        "feedback": "❌ Não devemos estragar o trabalho dos amigos!"
+    }
+]
+

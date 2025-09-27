@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Caixinha de Histórias do Bem</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Tela Inicial -->
+        <div id="home-screen" class="screen active">
+            <header class="app-header">
+                <h1>🎭 Caixinha de Histórias do Bem</h1>
+                <p class="subtitle">Uma ferramenta para evangelizadores trabalharem com crianças</p>
+            </header>
+            
+            <div class="theme-selection">
+                <h2>O que vamos aprender hoje?</h2>
+                <div class="theme-grid">
+                    <div class="theme-card" data-theme="amizade" onclick="selectTheme('amizade')">
+                        <div class="theme-icon">🤝</div>
+                        <h3>Amizade e Cooperação</h3>
+                        <p>Aprender a trabalhar juntos e ajudar os amigos</p>
+                    </div>
+                    
+                    <!-- Outros temas (desabilitados por enquanto) -->
+                    <div class="theme-card disabled">
+                        <div class="theme-icon">❤️</div>
+                        <h3>Amor ao Próximo</h3>
+                        <p>Em breve...</p>
+                    </div>
+                    
+                    <div class="theme-card disabled">
+                        <div class="theme-icon">🙏</div>
+                        <h3>Gratidão</h3>
+                        <p>Em breve...</p>
+                    </div>
+                    
+                    <div class="theme-card disabled">
+                        <div class="theme-icon">🌱</div>
+                        <h3>Respeito à Natureza</h3>
+                        <p>Em breve...</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Tela de Atividades -->
+        <div id="activities-screen" class="screen">
+            <header class="screen-header">
+                <button class="back-btn" onclick="goHome()">← Voltar</button>
+                <h2>🤝 Amizade e Cooperação</h2>
+            </header>
+            
+            <div class="activities-grid">
+                <div class="activity-card" onclick="startActivity('teatro')">
+                    <div class="activity-icon">🎭</div>
+                    <h3>Teatro de Fantoches</h3>
+                    <p>A história do "Castelo de Areia Gigante"</p>
+                </div>
+                
+                <div class="activity-card" onclick="startActivity('jogo')">
+                    <div class="activity-icon">🎯</div>
+                    <h3>Certo e Errado</h3>
+                    <p>Jogo visual sobre cooperação</p>
+                </div>
+                
+                <div class="activity-card" onclick="startActivity('musica')">
+                    <div class="activity-icon">🎵</div>
+                    <h3>Cantinho da Música</h3>
+                    <p>"Juntos é Melhor"</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Tela do Teatro -->
+        <div id="teatro-screen" class="screen">
+            <header class="screen-header">
+                <button class="back-btn" onclick="goToActivities()">← Voltar</button>
+                <h2>🎭 Teatro de Fantoches Digital</h2>
+            </header>
+            
+            <div class="teatro-container">
+                <div class="stage">
+                    <div class="scene-display">
+                        <img id="scene-image" src="" alt="Cena da história">
+                        <div class="characters-container" id="characters-container">
+                            <!-- Personagens serão inseridos aqui dinamicamente -->
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="story-controls">
+                    <div class="story-text" id="story-text">
+                        Clique em "Começar" para iniciar a história!
+                    </div>
+                    
+                    <div class="control-buttons">
+                        <button id="prev-btn" onclick="previousScene()" disabled>← Anterior</button>
+                        <button id="start-btn" onclick="startStory()">Começar</button>
+                        <button id="next-btn" onclick="nextScene()" disabled>Próxima →</button>
+                    </div>
+                    
+                    <div class="scene-indicator">
+                        <span id="scene-counter">Cena 0 de 5</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Tela do Jogo -->
+        <div id="jogo-screen" class="screen">
+            <header class="screen-header">
+                <button class="back-btn" onclick="goToActivities()">← Voltar</button>
+                <h2>🎯 Jogo do Certo e Errado</h2>
+            </header>
+            
+            <div class="game-container">
+                <div class="game-question">
+                    <h3 id="game-question-text">Isso é um jeito legal de cooperar com os amigos?</h3>
+                </div>
+                
+                <div class="game-image-container">
+                    <img id="game-image" src="" alt="Situação do jogo">
+                    <div class="feedback-overlay" id="feedback-overlay">
+                        <div class="feedback-content" id="feedback-content"></div>
+                    </div>
+                </div>
+                
+                <div class="game-buttons">
+                    <button class="answer-btn correct-btn" onclick="answerGame(true)">
+                        👍 Certo
+                    </button>
+                    <button class="answer-btn wrong-btn" onclick="answerGame(false)">
+                        👎 Errado
+                    </button>
+                </div>
+                
+                <div class="game-progress">
+                    <span id="game-counter">Pergunta 1 de 4</span>
+                    <button id="next-question-btn" onclick="nextQuestion()" style="display: none;">Próxima Pergunta</button>
+                    <button id="restart-game-btn" onclick="restartGame()" style="display: none;">Jogar Novamente</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Tela da Música -->
+        <div id="musica-screen" class="screen">
+            <header class="screen-header">
+                <button class="back-btn" onclick="goToActivities()">← Voltar</button>
+                <h2>🎵 Cantinho da Música</h2>
+            </header>
+            
+            <div class="music-container">
+                <div class="music-title">
+                    <h3>"Juntos é Melhor"</h3>
+                    <p>Uma canção sobre amizade e cooperação</p>
+                </div>
+                
+                <div class="lyrics-display" id="lyrics-display">
+                    <div class="lyrics-section">
+                        <h4>Verso 1:</h4>
+                        <p>Se eu estou sozinho,<br>
+                        Demora um pouquinho.<br>
+                        Mas com meu amigo,<br>
+                        Tudo é mais divertido!</p>
+                    </div>
+                    
+                    <div class="lyrics-section">
+                        <h4>Refrão:</h4>
+                        <p>Juntos, juntos, juntos,<br>
+                        Juntos é melhor!<br>
+                        A gente brinca e ajuda,<br>
+                        Com muito mais amor!</p>
+                    </div>
+                    
+                    <div class="lyrics-section">
+                        <h4>Verso 2:</h4>
+                        <p>Se o brinquedo quebra,<br>
+                        Ou o lanche acaba,<br>
+                        Com um amigo perto,<br>
+                        Tudo dá mais certo!</p>
+                    </div>
+                    
+                    <div class="lyrics-section">
+                        <h4>Refrão:</h4>
+                        <p>Juntos, juntos, juntos,<br>
+                        Juntos é melhor!<br>
+                        A gente brinca e ajuda,<br>
+                        Com muito mais amor!</p>
+                    </div>
+                </div>
+                
+                <div class="music-instructions">
+                    <p>💡 <strong>Dica para o evangelizador:</strong> Cante junto com as crianças! Você pode bater palmas ou usar instrumentos simples para acompanhar a melodia.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
+

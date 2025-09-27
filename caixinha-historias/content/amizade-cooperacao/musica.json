@@ -1,0 +1,24 @@
+{
+    "title": "Juntos é Melhor",
+    "subtitle": "Uma canção sobre amizade e cooperação",
+    "lyrics": [
+        {
+            "type": "verso",
+            "text": "Se eu estou sozinho,\nDemora um pouquinho.\nMas com meu amigo,\nTudo é mais divertido!"
+        },
+        {
+            "type": "refrão",
+            "text": "Juntos, juntos, juntos,\nJuntos é melhor!\nA gente brinca e ajuda,\nCom muito mais amor!"
+        },
+        {
+            "type": "verso",
+            "text": "Se o brinquedo quebra,\nOu o lanche acaba,\nCom um amigo perto,\nTudo dá mais certo!"
+        },
+        {
+            "type": "refrão",
+            "text": "Juntos, juntos, juntos,\nJuntos é melhor!\nA gente brinca e ajuda,\nCom muito mais amor!"
+        }
+    ],
+    "instructions": "💡 **Dica para o evangelizador:** Cante junto com as crianças! Você pode bater palmas ou usar instrumentos simples para acompanhar a melodia."
+}
+
