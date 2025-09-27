@@ -5,18 +5,18 @@
         "text": "Este é o Léo. Ele estava na praia e sonhava em construir o maior e mais bonito castelo de areia de todos! Mas ele olhou para toda aquela areia e pensou: \"Nossa, como vou fazer isso sozinho? É muito difícil!\""
     },
     {
-        "image": "assets/images/praia_cenario.png",
-        "characters": ["assets/images/leo_triste.png", "assets/images/bia_acenando.png"],
+        "image": "assets/images/cena2.png",
+       /* "characters": ["assets/images/leo_triste.png", "assets/images/bia_acenando.png"],*/
         "text": "De repente, a amiga do Léo, a Bia, chegou na praia. Ela viu o Léo meio desanimado e perguntou: \"O que foi, Léo?\". Ele contou sobre seu sonho de construir um castelo gigante."
     },
     {
-        "image": "assets/images/praia_cenario.png",
-        "characters": ["assets/images/leo_sorrindo.png", "assets/images/bia_aproximando.png"],
+        "image": "assets/images/cena3.png",
+       /* "characters": ["assets/images/leo_sorrindo.png", "assets/images/bia_aproximando.png"],*/
         "text": "A Bia sorriu e disse: \"Sozinho pode ser difícil, mas juntos nós conseguimos! Eu te ajudo!\". O que vocês acham que o Léo sentiu quando ouviu isso, crianças? (Pausa para interação)"
     },
     {
-        "image": "assets/images/praia_cenario.png",
-        "characters": ["assets/images/leo_bia_trabalhando.png"],
+        "image": "assets/images/cena4.png",
+        /*"characters": ["assets/images/leo_bia_trabalhando.png"],*/
         "text": "Eles começaram a trabalhar juntos! O Léo pegava a areia molhada e a Bia ajudava a montar as torres. Trabalhando em equipe, tudo ficou mais rápido e divertido!"
     },
     {
